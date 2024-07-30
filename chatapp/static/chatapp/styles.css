@@ -1,0 +1,63 @@
+/* Colors */
+:root {
+    --light-red: #ffcccc;
+    --light-blue: #b3c7ff;
+    --light-lavender: #e6e6fa;
+    --complement-blue: #6666cc;
+    --soft-pink: #ffcce6;
+    --soft-gray: #d3d3d3;
+    --background: linear-gradient(to right, #ffcccc, #b3c7ff, #e6e6fa);
+    --hover-bg: rgb(185, 185, 248);
+}
+
+/* Headings */
+h1 {
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(to right, var(--light-red), var(--light-blue), var(--light-lavender));
+    width: 100%;
+    padding: 10px 0;
+}
+
+h1::content {
+    content: "";
+    background: linear-gradient(to right, red, blue, purple);
+    width: 100%;
+    transition: width 100ms;
+}
+
+h2 {
+    margin-top: 20px;
+    width: max-content;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+h2::after {
+    content: "";
+    background: linear-gradient(to right, red, blue, purple);
+    border-radius: 100px;
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 100ms;
+}
+
+/* Body */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background: var(--background);
+    margin: 0;
+    padding: 0;
+}
+
+/* Div style */
+div {
+    border-style: solid;
+    border-width: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-image: linear-gradient(to right, black, grey, green) 1;
+}

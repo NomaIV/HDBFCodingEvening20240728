@@ -1,0 +1,20 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'chatapp/styles.css'%}">
+
+{% block content %}
+    <h1> Chat!</h1>
+    <h2>Login</h2>
+    <form method="post">
+        {% csrf_token %}
+        {% if error %}
+            <p style="color: red;">{{ error }}</p>
+        {% endif %}
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Username" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        
+        <button type="submit">Login</button>
+    </form>
+{% endblock %}

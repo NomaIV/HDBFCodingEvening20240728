@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Home page {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'chatapp/styles.css'%}">
+</head>
+
+<body>
+    <h1>Welcome to Chat!</h1>
+    <p>Your secure chat application, that keeps connected to your loved ones.</p>
+
+    <main>
+        {% block content %}{% endblock content %}
+    </main>
+</body>
+
+<!--Sign Up link-->
+<a href="{% url 'signup' %}">Sign Up</a>
+<small>To proceed</small>
+<small>Terms and conditions apply</small>
+
+<!--Login Link-->
+<a href="{% url 'login' %}">Log In</a>
+</html>

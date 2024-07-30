@@ -1,0 +1,13 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'chatapp/styles.css'%}">
+
+{% block  %}
+    <h1> Chat!</h1>
+    <h2>Edit Profile</h2>
+    <form method='post' enctype='multipart/form-data'>
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">Update Profile</button>
+    </form>
+
+{% endblock  %}
